@@ -1,0 +1,35 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+  external_labels:
+    monitor: 'frappe-saas-monitor'
+
+scrape_configs:
+  # Prometheus self-monitoring
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  # MariaDB Monitoring
+  - job_name: 'mariadb'
+    static_configs:
+      - targets: ['db:3306']
+
+  # Redis Monitoring
+  - job_name: 'redis-cache'
+    static_configs:
+      - targets: ['redis-cache:6379']
+
+  - job_name: 'redis-queue'
+    static_configs:
+      - targets: ['redis-queue:6379']
+
+  # Nginx Monitoring
+  - job_name: 'nginx'
+    static_configs:
+      - targets: ['nginx:80']
+
+  # Docker Container Monitoring
+  - job_name: 'docker'
+    static_configs:
+      - targets: ['localhost:9323']

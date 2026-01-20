@@ -1,0 +1,60 @@
+# Environment
+.env
+*.env.local
+
+# Docker
+.docker/
+
+# Frappe
+sites/*
+!sites/apps.txt
+!sites/common_site_config.json
+apps/frappe
+apps/erpnext
+
+# Backups
+backups/
+*.sql
+*.sql.gz
+*.tar
+*.tar.gz
+
+# Logs
+logs/
+*.log
+
+# SSL Certificates
+certs/
+*.pem
+*.crt
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Monitoring Data
+prometheus/data/
+grafana/data/
