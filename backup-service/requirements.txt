@@ -1,4 +1,3 @@
 schedule
-cron
 python-crontab
 boto3
