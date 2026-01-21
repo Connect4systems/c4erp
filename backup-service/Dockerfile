@@ -3,7 +3,7 @@ FROM python:3.10-alpine
 WORKDIR /app
 
 # Install system dependencies
-RUN apk add --no-alive --update \
+RUN apk add --no-cache --update \
     bash \
     curl \
     docker-cli \
