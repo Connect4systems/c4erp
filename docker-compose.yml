@@ -61,8 +61,6 @@ services:
     volumes:
       - sites:/home/frappe/frappe-bench/sites
       - assets:/home/frappe/frappe-bench/sites/assets
-      - ./apps:/home/frappe/frappe-bench/apps
-      - ./config/common_site_config.json:/home/frappe/frappe-bench/sites/common_site_config.json
     networks:
       - frappe-network
     depends_on:
@@ -89,8 +87,6 @@ services:
       - REDIS_SOCKETIO=${REDIS_SOCKETIO}
     volumes:
       - sites:/home/frappe/frappe-bench/sites
-      - ./apps:/home/frappe/frappe-bench/apps
-      - ./config/common_site_config.json:/home/frappe/frappe-bench/sites/common_site_config.json
     networks:
       - frappe-network
     depends_on:
@@ -114,8 +110,6 @@ services:
       - REDIS_SOCKETIO=${REDIS_SOCKETIO}
     volumes:
       - sites:/home/frappe/frappe-bench/sites
-      - ./apps:/home/frappe/frappe-bench/apps
-      - ./config/common_site_config.json:/home/frappe/frappe-bench/sites/common_site_config.json
     networks:
       - frappe-network
     depends_on:
@@ -133,7 +127,6 @@ services:
       - REDIS_SOCKETIO=${REDIS_SOCKETIO}
     volumes:
       - sites:/home/frappe/frappe-bench/sites
-      - ./apps:/home/frappe/frappe-bench/apps
     networks:
       - frappe-network
     depends_on:
