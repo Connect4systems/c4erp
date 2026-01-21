@@ -51,7 +51,7 @@ services:
   # Frappe/ERPNext Backend
   frappe:
     image: frappe/erpnext:${ERPNEXT_VERSION:-v15.0.0}
-    command: bench serve --port 8000 --host 0.0.0.0
+    command: bench serve --port 8000
     environment:
       - DB_HOST=${DB_HOST}
       - DB_PORT=${DB_PORT:-3306}
@@ -159,7 +159,7 @@ services:
   api-server:
     build: ./api-server
     ports:
-      - "${API_PORT:-8000}:8000"
+      - "${API_PORT:-8001}:8000"
     environment:
       - DB_HOST=${DB_HOST}
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
